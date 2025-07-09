@@ -54,18 +54,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -88,61 +77,64 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('''Support – Science Platform App
-Welcome to the Science Platform Support Page
-
-We’re here to help you with any questions or issues related to the Science Platform app. Below you’ll find resources and contact information for quick assistance.
-
-🔧 Common Troubleshooting
-App Not Opening
-Make sure your app is updated to the latest version.
-Login Issues
-Reset your password from the login screen or contact us if you still face issues.
-Video Not Playing
-Ensure you have a stable internet connection and try restarting the app.
-📩 Contact Us
-If you didn’t find your answer, feel free to contact us:
-
-Email: rahim.nextive@gmail.com
-Phone: +8801718663032
-
-📚 FAQs
-Is the app free to use?
-Yes, the Science Platform app is completely free.
-Can I use the app offline?
-Currently, an internet connection is required to access most features.
-Where can I give feedback?
-Email us at rahim.nextive@gmail.com
-🔒 Privacy Policy
-Read our privacy policy here:
-https://science-platform.apphq.online/privacy
-
-Name: Abdul Rahim
-Company: Nextive Solution
-
-Contact :
-phone : +8801718663032
-Email: rahim.nextive@gmail.com
-
-'''),
-           
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            // Column is also a layout widget. It takes a list of children and
+            // arranges them vertically. By default, it sizes itself to fit its
+            // children horizontally, and tries to be as tall as its parent.
+            //
+            // Column has various properties to control how it sizes itself and
+            // how it positions its children. Here we use mainAxisAlignment to
+            // center the children vertically; the main axis here is the vertical
+            // axis because Columns are vertical (the cross axis would be
+            // horizontal).
+            //
+            // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+            // action in the IDE, or press "p" in the console), to see the
+            // wireframe for each widget.
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text('''Support – Science Platform App
+        Welcome to the Science Platform Support Page
+        
+        We’re here to help you with any questions or issues related to the Science Platform app. Below you’ll find resources and contact information for quick assistance.
+        
+        🔧 Common Troubleshooting
+        App Not Opening
+        Make sure your app is updated to the latest version.
+        Login Issues
+        Reset your password from the login screen or contact us if you still face issues.
+        Video Not Playing
+        Ensure you have a stable internet connection and try restarting the app.
+        📩 Contact Us
+        If you didn’t find your answer, feel free to contact us:
+        
+        Email: rahim.nextive@gmail.com
+        Phone: +8801718663032
+        
+        📚 FAQs
+        Is the app free to use?
+        Yes, the Science Platform app is completely free.
+        Can I use the app offline?
+        Currently, an internet connection is required to access most features.
+        Where can I give feedback?
+        Email us at rahim.nextive@gmail.com
+        🔒 Privacy Policy
+        Read our privacy policy here:
+        https://science-platform.apphq.online/privacy
+        
+        Name: Abdul Rahim
+        Company: Nextive Solution
+        
+        Contact :
+        phone : +8801718663032
+        Email: rahim.nextive@gmail.com
+        
+        '''),
+             
+            ],
+          ),
         ),
       ),
      // This trailing comma makes auto-formatting nicer for build methods.
