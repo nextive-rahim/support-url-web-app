@@ -95,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // wireframe for each widget.
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Text('''Support – Science Platform App
+              const Text('''  Support – Science Platform App
         Welcome to the Science Platform Support Page
         
         We’re here to help you with any questions or issues related to the Science Platform app. Below you’ll find resources and contact information for quick assistance.
