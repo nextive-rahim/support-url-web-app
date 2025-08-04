@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Privacy Policies'),
+      home: const MyHomePage(title: 'Support Section'),
     );
   }
 }
@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Text(
-                  'Privacy policy',
+                  'Support Section',
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.w600,
@@ -124,34 +124,41 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 SizedBox(height: 50),
-                Text(
-                  '''
-This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
-We do not store any personal data or information from our users.
-
-Delete Your Personal Data
-
-You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.
-
-Our Service may give You the ability to delete certain information about You from within the Service.
-
-You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.
-
-Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.
-
-
-Links to Other Websites
-
-Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
-
-We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.''',
-                  style: TextStyle(
-                    fontSize: 16,
-                    // fontWeight: FontWeight.w600,
-                    // letterSpacing: 2,
-                    // color: Colors.black,
-                  ),
-                ),
+              Text('''         Support – Nayeem's English Care App
+        Welcome to the Nayeem's English Care Support Page
+        
+        We’re here to help you with any questions or issues related to the Nayeem's English Care app. Below you’ll find resources and contact information for quick assistance.
+        
+        🔧 Common Troubleshooting
+        App Not Opening
+        Make sure your app is updated to the latest version.
+        Login Issues
+        Reset your password from the login screen or contact us if you still face issues.
+        Video Not Playing
+        Ensure you have a stable internet connection and try restarting the app.
+        📩 Contact Us
+        If you didn’t find your answer, feel free to contact us:
+        
+        Email: rahim.nextive@gmail.com
+        Phone: +8801718663032
+         
+        📚 FAQs
+        Is the app free to use?
+        Yes, the Nayeem's English Care app is completely free.
+        Can I use the app offline?
+        Currently, an internet connection is required to access most features.
+        Where can I give feedback?
+        Email us at rahim.nextive@gmail.com
+       
+        
+        Name: Abdul Rahim
+        Company: Nextive Solution
+        
+        Contact :
+        phone : +8801718663032
+        Email: rahim.nextive@gmail.com
+        
+        '''),
               ],
             ),
           ),
