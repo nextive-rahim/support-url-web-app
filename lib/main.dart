@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'eTestPaper',
+      title: "Nayeem's English Care",
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'eTestPaper',
+                  'Nayeem\'s English Care',
                   style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w600,
@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(height: 50),
                 Text(
-                  'Last updated: July 28, 2025',
+                  'Last updated: August 04, 2025',
                   style: TextStyle(
                     fontSize: 16,
                     // fontWeight: FontWeight.w600,
