@@ -125,9 +125,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(height: 50),
                 Text('''         Admission Assistant
-        Welcome to the Nayeem's English Care Support Page
+        Welcome to the Admission Assistant Support Page
         
-        We’re here to help you with any questions or issues related to the Nayeem's English Care app. Below you’ll find resources and contact information for quick assistance.
+        We’re here to help you with any questions or issues related to the Admission Assistant app. Below you’ll find resources and contact information for quick assistance.
         
         🔧 Common Troubleshooting
         App Not Opening
