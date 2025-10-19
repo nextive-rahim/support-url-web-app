@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Shikkha Squared",
+      title: "Karigori Pathsala",
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'Shikkha Squared',
+                  'Karigori Pathsala',
                   style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w600,
@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(height: 50),
                 Text(
-                  'Last updated: August 26, 2025',
+                  'Last updated: October 19, 2025',
                   style: TextStyle(
                     fontSize: 16,
                     // fontWeight: FontWeight.w600,
@@ -124,10 +124,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 SizedBox(height: 50),
-                Text('''         Shikkha Squared
-        Welcome to the Shikkha Squared Support Page
+                Text('''         Karigori Pathsala
+        Welcome to the Karigori Pathsala Support Page
         
-        We’re here to help you with any questions or issues related to the Shikkha Squared app. Below you’ll find resources and contact information for quick assistance.
+        We’re here to help you with any questions or issues related to the Karigori Pathsala app. Below you’ll find resources and contact information for quick assistance.
         
         🔧 Common Troubleshooting
         App Not Opening
@@ -143,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
          
         📚 FAQs
         Is the app free to use?
-        Yes, the Shikkha Squared app is completely free.
+        Yes, the Karigori Pathsala app is completely free.
         Can I use the app offline?
         Currently, an internet connection is required to access most features.
         Where can I give feedback?
