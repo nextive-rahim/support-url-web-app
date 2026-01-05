@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Master Class",
+      title: "Sahittyapara",
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'Master Class',
+                  'Sahittyapara',
                   style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w600,
@@ -124,10 +124,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 SizedBox(height: 50),
-                Text('''         Master Class
-        Welcome to the Master Class Support Page
+                Text('''         Sahittyapara
+        Welcome to the Sahittyapara Support Page
         
-        We’re here to help you with any questions or issues related to the Master Class app. Below you’ll find resources and contact information for quick assistance.
+        We’re here to help you with any questions or issues related to the Sahittyapara app. Below you’ll find resources and contact information for quick assistance.
         
         🔧 Common Troubleshooting
         App Not Opening
@@ -143,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
          
         📚 FAQs
         Is the app free to use?
-        Yes, the Master Class app is completely free.
+        Yes, the Sahittyapara app is completely free.
         Can I use the app offline?
         Currently, an internet connection is required to access most features.
         Where can I give feedback?
