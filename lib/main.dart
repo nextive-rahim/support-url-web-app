@@ -10,8 +10,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,
-      title: 'Science Platform',
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Jony Law School',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -54,8 +55,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -95,10 +94,10 @@ class _MyHomePageState extends State<MyHomePage> {
             // wireframe for each widget.
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Text('''  Support – Science Platform App
-        Welcome to the Science Platform Support Page
+              const Text('''  Support – Jony Law School App
+        Welcome to the Jony Law School Support Page
         
-        We’re here to help you with any questions or issues related to the Science Platform app. Below you’ll find resources and contact information for quick assistance.
+        We’re here to help you with any questions or issues related to the Jony Law School app. Below you’ll find resources and contact information for quick assistance.
         
         🔧 Common Troubleshooting
         App Not Opening
@@ -115,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
         
         📚 FAQs
         Is the app free to use?
-        Yes, the Science Platform app is completely free.
+        Yes, the Jony Law School app is completely free.
         Can I use the app offline?
         Currently, an internet connection is required to access most features.
         Where can I give feedback?
@@ -132,12 +131,11 @@ class _MyHomePageState extends State<MyHomePage> {
         Email: rahim.nextive@gmail.com
         
         '''),
-             
             ],
           ),
         ),
       ),
-     // This trailing comma makes auto-formatting nicer for build methods.
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
