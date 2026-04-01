@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Jony Law School',
+      title: 'English Fantasy',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'Jony Law School',
+                  'English Fantasy',
                   style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w600,
