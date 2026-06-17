@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'English Fantasy',
+      title: 'Physices Study BD',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -73,12 +73,12 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+      body: SingleChildScrollView(
+        // Allows the support content to scroll when it overflows the screen.
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             // Column is also a layout widget. It takes a list of children and
             // arranges them vertically. By default, it sizes itself to fit its
             // children horizontally, and tries to be as tall as its parent.
@@ -94,10 +94,10 @@ class _MyHomePageState extends State<MyHomePage> {
             // wireframe for each widget.
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Text('''  Support – English Fantasy App
-        Welcome to the English Fantasy Support Page
+              const Text('''  Support – Physices Study BD App
+        Welcome to the Physices Study BD Support Page
         
-        We’re here to help you with any questions or issues related to the English Fantasy app. Below you’ll find resources and contact information for quick assistance.
+        We’re here to help you with any questions or issues related to the Physices Study BD app. Below you’ll find resources and contact information for quick assistance.
         
         🔧 Common Troubleshooting
         App Not Opening
@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
         
         📚 FAQs
         Is the app free to use?
-        Yes, the English Fantasy app is completely free.
+        Yes, the Physices Study BD app is completely free.
         Can I use the app offline?
         Currently, an internet connection is required to access most features.
         Where can I give feedback?
