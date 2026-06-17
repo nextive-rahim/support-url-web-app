@@ -119,9 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Currently, an internet connection is required to access most features.
         Where can I give feedback?
         Email us at rahim.nextive@gmail.com
-        🔒 Privacy Policy
-        Read our privacy policy here:
-        https://englishfantasypricvacy.netlify.app/
+
         
         Name: Abdul Rahim
         Company: Nextive Solution
