@@ -14,7 +14,7 @@ void main() {
     await tester.pumpWidget(const MyApp());
 
     expect(find.text('Delete Your Account'), findsOneWidget);
-    expect(find.text('Shikkhangon15@gmail.com'), findsOneWidget);
+    expect(find.text('tangailcadetacademy1@gmail.com'), findsOneWidget);
 
     await tester.tap(find.widgetWithText(FilledButton, 'Delete Account'));
     await tester.pumpAndSettle();

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-const _appName = 'Shikkhangon';
-const _supportEmail = 'Shikkhangon15@gmail.com';
+const _appName = 'Tangail Cadet Academy';
+const _supportEmail = 'tangailcadetacademy1@gmail.com';
 
 const _textDark = Color(0xFF0F172A);
 const _textBody = Color(0xFF334155);
 const _danger = Color(0xFF8B0A14);
 const _link = Color(0xFFD70A2E);
 
-/// Static demo page explaining how to delete a Shikkhangon account.
+/// Static demo page explaining how to delete a Tangail Cadet Academy account.
 /// The confirm flow only shows a success message; no request is sent.
 class DeleteAccountPage extends StatelessWidget {
   const DeleteAccountPage({super.key});
@@ -65,7 +65,7 @@ class _PageContent extends StatelessWidget {
         Center(
           child: Image.asset(
             'assets/images/logo.png',
-            height: 64,
+            height: 96,
             semanticLabel: _appName,
           ),
         ),

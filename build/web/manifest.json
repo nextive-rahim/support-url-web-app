@@ -1,11 +1,11 @@
 {
-    "name": "Shikkhangon",
-    "short_name": "Shikkhangon",
+    "name": "Tangail Cadet Academy",
+    "short_name": "Tangail Cadet",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#FFFFFF",
-    "theme_color": "#0054A6",
-    "description": "Shikkhangon - support and help center.",
+    "theme_color": "#2E2A7F",
+    "description": "Tangail Cadet Academy - delete account.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
