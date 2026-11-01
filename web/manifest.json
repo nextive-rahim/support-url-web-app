@@ -1,11 +1,11 @@
 {
-    "name": "support_url",
-    "short_name": "support_url",
+    "name": "Shikkhangon",
+    "short_name": "Shikkhangon",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#FFFFFF",
+    "theme_color": "#0054A6",
+    "description": "Shikkhangon - support and help center.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
