@@ -1,0 +1,9 @@
+[build]
+  # Deploy the compiled Flutter web app already checked into the repository.
+  command = ""
+  publish = "build/web"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
