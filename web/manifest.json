@@ -1,11 +1,11 @@
 {
-    "name": "support_url",
-    "short_name": "support_url",
+    "name": "Vitez Support",
+    "short_name": "Vitez",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#3B000B",
+    "theme_color": "#3B000B",
+    "description": "Vitez Support",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
