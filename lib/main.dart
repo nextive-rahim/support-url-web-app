@@ -104,7 +104,11 @@ class _Hero extends StatelessWidget {
         gradient: RadialGradient(
           center: Alignment(0, -0.4),
           radius: 1.4,
-          colors: [AppColors.maroonLight, AppColors.maroon, AppColors.maroonDark],
+          colors: [
+            AppColors.maroonLight,
+            AppColors.maroon,
+            AppColors.maroonDark,
+          ],
           stops: [0, 0.45, 1],
         ),
       ),
@@ -163,10 +167,14 @@ class _Hero extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(Icons.update_rounded, size: 16, color: AppColors.gold),
+                const Icon(
+                  Icons.update_rounded,
+                  size: 16,
+                  color: AppColors.gold,
+                ),
                 const SizedBox(width: 8),
                 Text(
-                  'Last updated: Augest 26, 2025',
+                  'Last updated: August 26, 2025',
                   style: TextStyle(
                     color: Colors.white.withValues(alpha: 0.9),
                     fontSize: 14,
@@ -298,7 +306,10 @@ class _Footer extends StatelessWidget {
       child: Text(
         '© ${DateTime.now().year} Nextive Solution · Vitez',
         textAlign: TextAlign.center,
-        style: TextStyle(color: Colors.white.withValues(alpha: 0.7), fontSize: 13),
+        style: TextStyle(
+          color: Colors.white.withValues(alpha: 0.7),
+          fontSize: 13,
+        ),
       ),
     );
   }
@@ -448,8 +459,11 @@ class _Note extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(Icons.info_outline_rounded,
-              color: AppColors.maroonLight, size: 22),
+          const Icon(
+            Icons.info_outline_rounded,
+            color: AppColors.maroonLight,
+            size: 22,
+          ),
           const SizedBox(width: 12),
           Expanded(
             child: Text(
