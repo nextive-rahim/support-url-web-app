@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +13,8 @@ class AppColors {
   static const goldDeep = Color(0xFFC8902A);
   static const cream = Color(0xFFFFF8EC);
   static const ink = Color(0xFF2B1A1C);
-  static const muted = Color(0xFF6E5A5C);
+  static const muted = Color(0xFF5E4A4C);
 }
-
-const _email = 'rahim.nextive@gmail.com';
-const _phone = '+8801718663032';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -27,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Vitez Support',
+      title: 'Vitez – Privacy Policy',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: AppColors.maroon,
@@ -36,13 +32,13 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: AppColors.cream,
       ),
-      home: const SupportPage(),
+      home: const PrivacyPolicyPage(),
     );
   }
 }
 
-class SupportPage extends StatelessWidget {
-  const SupportPage({super.key});
+class PrivacyPolicyPage extends StatelessWidget {
+  const PrivacyPolicyPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -70,13 +66,9 @@ class SupportPage extends StatelessWidget {
                               children: [
                                 _IntroCard(),
                                 SizedBox(height: 20),
-                                _TroubleshootingSection(),
+                                _DeleteDataSection(),
                                 SizedBox(height: 20),
-                                _ContactSection(),
-                                SizedBox(height: 20),
-                                _FaqSection(),
-                                SizedBox(height: 20),
-                                _DeveloperCard(),
+                                _LinksSection(),
                               ],
                             ),
                           ),
@@ -138,25 +130,49 @@ class _Hero extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 20),
           Text(
-            'Support – Vitez App',
+            'Vitez',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white.withValues(alpha: 0.9),
+              fontSize: isWide ? 22 : 18,
+              fontWeight: FontWeight.w600,
+              letterSpacing: 4,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            'Privacy policy',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: AppColors.gold,
-              fontSize: isWide ? 38 : 28,
+              fontSize: isWide ? 40 : 30,
               fontWeight: FontWeight.w800,
               letterSpacing: 0.3,
             ),
           ),
-          const SizedBox(height: 10),
-          Text(
-            'Welcome to the Vitez Support Page',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white.withValues(alpha: 0.9),
-              fontSize: isWide ? 18 : 16,
-              fontWeight: FontWeight.w500,
+          const SizedBox(height: 16),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.08),
+              borderRadius: BorderRadius.circular(999),
+              border: Border.all(color: AppColors.gold.withValues(alpha: 0.5)),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.update_rounded, size: 16, color: AppColors.gold),
+                const SizedBox(width: 8),
+                Text(
+                  'Last updated: Augest 26, 2025',
+                  style: TextStyle(
+                    color: Colors.white.withValues(alpha: 0.9),
+                    fontSize: 14,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -175,45 +191,19 @@ class _IntroCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const _Card(
-      child: Text(
-        'We’re here to help you with any questions or issues related to the '
-        'Vitez app. Below you’ll find resources and contact information for '
-        'quick assistance.',
-        textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 16, height: 1.6, color: AppColors.ink),
-      ),
-    );
-  }
-}
-
-class _TroubleshootingSection extends StatelessWidget {
-  const _TroubleshootingSection();
-
-  @override
-  Widget build(BuildContext context) {
-    return const _Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _SectionTitle(emoji: '🔧', title: 'Common Troubleshooting'),
+          _Paragraph(
+            'This Privacy Policy describes Our policies and procedures on the '
+            'collection, use and disclosure of Your information when You use '
+            'the Service and tells You about Your privacy rights and how the '
+            'law protects You.',
+          ),
           SizedBox(height: 16),
-          _QaTile(
-            icon: Icons.phone_android_rounded,
-            question: 'App Not Opening',
-            answer: 'Make sure your app is updated to the latest version.',
-          ),
-          _QaTile(
-            icon: Icons.lock_outline_rounded,
-            question: 'Login Issues',
-            answer:
-                'Reset your password from the login screen or contact us if you still face issues.',
-          ),
-          _QaTile(
-            icon: Icons.play_circle_outline_rounded,
-            question: 'Video Not Playing',
-            answer:
-                'Ensure you have a stable internet connection and try restarting the app.',
-            isLast: true,
+          _Highlight(
+            icon: Icons.verified_user_outlined,
+            text: 'We do not store any personal data or information from our users.',
           ),
         ],
       ),
@@ -221,48 +211,8 @@ class _TroubleshootingSection extends StatelessWidget {
   }
 }
 
-class _ContactSection extends StatelessWidget {
-  const _ContactSection();
-
-  @override
-  Widget build(BuildContext context) {
-    return _Card(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const _SectionTitle(emoji: '📩', title: 'Contact Us'),
-          const SizedBox(height: 8),
-          const Text(
-            'If you didn’t find your answer, feel free to contact us:',
-            style: TextStyle(fontSize: 15, height: 1.5, color: AppColors.muted),
-          ),
-          const SizedBox(height: 16),
-          Wrap(
-            spacing: 12,
-            runSpacing: 12,
-            children: [
-              _ContactButton(
-                icon: Icons.email_outlined,
-                label: 'Email',
-                value: _email,
-                uri: Uri(scheme: 'mailto', path: _email),
-              ),
-              _ContactButton(
-                icon: Icons.phone_outlined,
-                label: 'Phone',
-                value: _phone,
-                uri: Uri(scheme: 'tel', path: _phone),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _FaqSection extends StatelessWidget {
-  const _FaqSection();
+class _DeleteDataSection extends StatelessWidget {
+  const _DeleteDataSection();
 
   @override
   Widget build(BuildContext context) {
@@ -270,21 +220,33 @@ class _FaqSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _SectionTitle(emoji: '📚', title: 'FAQs'),
-          SizedBox(height: 8),
-          _FaqTile(
-            question: 'Is the app free to use?',
-            answer: 'Yes, the Vitez app is completely free.',
+          _SectionTitle(
+            icon: Icons.delete_outline_rounded,
+            title: 'Delete Your Personal Data',
           ),
-          _FaqTile(
-            question: 'Can I use the app offline?',
-            answer:
-                'Currently, an internet connection is required to access most features.',
+          SizedBox(height: 16),
+          _Paragraph(
+            'You have the right to delete or request that We assist in deleting '
+            'the Personal Data that We have collected about You.',
           ),
-          _FaqTile(
-            question: 'Where can I give feedback?',
-            answer: 'Email us at $_email',
-            isLast: true,
+          _Gap(),
+          _Paragraph(
+            'Our Service may give You the ability to delete certain information '
+            'about You from within the Service.',
+          ),
+          _Gap(),
+          _Paragraph(
+            'You may update, amend, or delete Your information at any time by '
+            'signing in to Your Account, if you have one, and visiting the '
+            'account settings section that allows you to manage Your personal '
+            'information. You may also contact Us to request access to, '
+            'correct, or delete any personal information that You have '
+            'provided to Us.',
+          ),
+          _Gap(),
+          _Note(
+            'Please note, however, that We may need to retain certain '
+            'information when we have a legal obligation or lawful basis to do so.',
           ),
         ],
       ),
@@ -292,38 +254,31 @@ class _FaqSection extends StatelessWidget {
   }
 }
 
-class _DeveloperCard extends StatelessWidget {
-  const _DeveloperCard();
+class _LinksSection extends StatelessWidget {
+  const _LinksSection();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(24),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [AppColors.maroon, AppColors.maroonDark],
-        ),
-        border: Border.all(color: AppColors.gold.withValues(alpha: 0.6)),
-      ),
-      child: Wrap(
-        spacing: 32,
-        runSpacing: 20,
+    return const _Card(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const _InfoBlock(
-            items: [
-              ('Name', 'Abdul Rahim'),
-              ('Company', 'Nextive Solution'),
-            ],
+          _SectionTitle(
+            icon: Icons.link_rounded,
+            title: 'Links to Other Websites',
           ),
-          _InfoBlock(
-            heading: 'Contact :',
-            items: const [
-              ('phone', _phone),
-              ('Email', _email),
-            ],
+          SizedBox(height: 16),
+          _Paragraph(
+            "Our Service may contain links to other websites that are not "
+            "operated by Us. If You click on a third party link, You will be "
+            "directed to that third party's site. We strongly advise You to "
+            "review the Privacy Policy of every site You visit.",
+          ),
+          _Gap(),
+          _Paragraph(
+            'We have no control over and assume no responsibility for the '
+            'content, privacy policies or practices of any third party sites '
+            'or services.',
           ),
         ],
       ),
@@ -384,9 +339,9 @@ class _Card extends StatelessWidget {
 }
 
 class _SectionTitle extends StatelessWidget {
-  const _SectionTitle({required this.emoji, required this.title});
+  const _SectionTitle({required this.icon, required this.title});
 
-  final String emoji;
+  final IconData icon;
   final String title;
 
   @override
@@ -396,12 +351,11 @@ class _SectionTitle extends StatelessWidget {
         Container(
           width: 40,
           height: 40,
-          alignment: Alignment.center,
           decoration: BoxDecoration(
             color: AppColors.gold.withValues(alpha: 0.18),
             borderRadius: BorderRadius.circular(12),
           ),
-          child: Text(emoji, style: const TextStyle(fontSize: 20)),
+          child: Icon(icon, color: AppColors.maroon, size: 22),
         ),
         const SizedBox(width: 12),
         Flexible(
@@ -419,23 +373,70 @@ class _SectionTitle extends StatelessWidget {
   }
 }
 
-class _QaTile extends StatelessWidget {
-  const _QaTile({
-    required this.icon,
-    required this.question,
-    required this.answer,
-    this.isLast = false,
-  });
+class _Paragraph extends StatelessWidget {
+  const _Paragraph(this.text);
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return SelectableText(
+      text,
+      style: const TextStyle(fontSize: 16, height: 1.7, color: AppColors.muted),
+    );
+  }
+}
+
+class _Gap extends StatelessWidget {
+  const _Gap();
+
+  @override
+  Widget build(BuildContext context) => const SizedBox(height: 14);
+}
+
+class _Highlight extends StatelessWidget {
+  const _Highlight({required this.icon, required this.text});
 
   final IconData icon;
-  final String question;
-  final String answer;
-  final bool isLast;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: isLast ? 0 : 12),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: AppColors.maroon,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: Row(
+        children: [
+          Icon(icon, color: AppColors.gold, size: 26),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Text(
+              text,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                height: 1.5,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _Note extends StatelessWidget {
+  const _Note(this.text);
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: AppColors.cream,
@@ -447,192 +448,21 @@ class _QaTile extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(icon, color: AppColors.maroonLight, size: 22),
+          const Icon(Icons.info_outline_rounded,
+              color: AppColors.maroonLight, size: 22),
           const SizedBox(width: 12),
           Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  question,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.ink,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  answer,
-                  style: const TextStyle(
-                    fontSize: 15,
-                    height: 1.5,
-                    color: AppColors.muted,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _FaqTile extends StatelessWidget {
-  const _FaqTile({
-    required this.question,
-    required this.answer,
-    this.isLast = false,
-  });
-
-  final String question;
-  final String answer;
-  final bool isLast;
-
-  @override
-  Widget build(BuildContext context) {
-    return Theme(
-      data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-      child: Column(
-        children: [
-          ExpansionTile(
-            initiallyExpanded: true,
-            tilePadding: EdgeInsets.zero,
-            childrenPadding: const EdgeInsets.only(bottom: 12),
-            expandedAlignment: Alignment.centerLeft,
-            iconColor: AppColors.maroon,
-            collapsedIconColor: AppColors.muted,
-            title: Text(
-              question,
+            child: Text(
+              text,
               style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
+                fontSize: 15,
+                height: 1.6,
                 color: AppColors.ink,
               ),
             ),
-            children: [
-              Text(
-                answer,
-                style: const TextStyle(
-                  fontSize: 15,
-                  height: 1.5,
-                  color: AppColors.muted,
-                ),
-              ),
-            ],
           ),
-          if (!isLast)
-            Divider(height: 1, color: AppColors.gold.withValues(alpha: 0.35)),
         ],
       ),
-    );
-  }
-}
-
-class _ContactButton extends StatelessWidget {
-  const _ContactButton({
-    required this.icon,
-    required this.label,
-    required this.value,
-    required this.uri,
-  });
-
-  final IconData icon;
-  final String label;
-  final String value;
-  final Uri uri;
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: AppColors.maroon,
-      borderRadius: BorderRadius.circular(14),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(14),
-        onTap: () => launchUrl(uri),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(icon, color: AppColors.gold, size: 22),
-              const SizedBox(width: 12),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    '$label:',
-                    style: TextStyle(
-                      color: Colors.white.withValues(alpha: 0.7),
-                      fontSize: 12,
-                    ),
-                  ),
-                  Text(
-                    value,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _InfoBlock extends StatelessWidget {
-  const _InfoBlock({this.heading, required this.items});
-
-  final String? heading;
-  final List<(String, String)> items;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        if (heading != null) ...[
-          Text(
-            heading!,
-            style: const TextStyle(
-              color: AppColors.gold,
-              fontSize: 15,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          const SizedBox(height: 6),
-        ],
-        for (final (label, value) in items)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 6),
-            child: SelectableText.rich(
-              TextSpan(
-                children: [
-                  TextSpan(
-                    text: '$label: ',
-                    style: TextStyle(color: Colors.white.withValues(alpha: 0.7)),
-                  ),
-                  TextSpan(
-                    text: value,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
-              style: const TextStyle(fontSize: 15),
-            ),
-          ),
-      ],
     );
   }
 }

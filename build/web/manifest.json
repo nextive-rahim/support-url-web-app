@@ -1,11 +1,11 @@
 {
-    "name": "Vitez Support",
+    "name": "Vitez Privacy Policy",
     "short_name": "Vitez",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#3B000B",
     "theme_color": "#3B000B",
-    "description": "Vitez Support",
+    "description": "Vitez Privacy Policy",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
