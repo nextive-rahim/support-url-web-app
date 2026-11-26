@@ -4,16 +4,16 @@ void main() {
   runApp(const MyApp());
 }
 
-/// Brand colors taken from the Vitez app logo.
+/// Brand colors taken from the Protiva app (protiva/lib/src/core/gen/colors.gen.dart).
 class AppColors {
-  static const maroonDark = Color(0xFF2A0008);
-  static const maroon = Color(0xFF5A0012);
-  static const maroonLight = Color(0xFF8B1A2B);
-  static const gold = Color(0xFFF2C14E);
-  static const goldDeep = Color(0xFFC8902A);
-  static const cream = Color(0xFFFFF8EC);
-  static const ink = Color(0xFF2B1A1C);
-  static const muted = Color(0xFF5E4A4C);
+  static const brandDark = Color(0xFF7A0D12);
+  static const brandEdge = Color(0xFF9C1218);
+  static const brand = Color(0xFFEB2027);
+  static const brandLight = Color(0xFFF2545A);
+  static const brandTint = Color(0xFFFDECEC);
+  static const surface = Color(0xFFF7F7F7);
+  static const ink = Color(0xFF272D36);
+  static const muted = Color(0xFF52575E);
 }
 
 class MyApp extends StatelessWidget {
@@ -23,14 +23,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Vitez – Privacy Policy',
+      title: 'Protiva – Privacy Policy',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: AppColors.maroon,
-          primary: AppColors.maroon,
-          secondary: AppColors.gold,
+          seedColor: AppColors.brand,
+          primary: AppColors.brand,
+          secondary: AppColors.brandEdge,
         ),
-        scaffoldBackgroundColor: AppColors.cream,
+        scaffoldBackgroundColor: AppColors.surface,
       ),
       home: const PrivacyPolicyPage(),
     );
@@ -105,9 +105,9 @@ class _Hero extends StatelessWidget {
           center: Alignment(0, -0.4),
           radius: 1.4,
           colors: [
-            AppColors.maroonLight,
-            AppColors.maroon,
-            AppColors.maroonDark,
+            AppColors.brandLight,
+            AppColors.brand,
+            AppColors.brandEdge,
           ],
           stops: [0, 0.45, 1],
         ),
@@ -116,12 +116,13 @@ class _Hero extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(32),
+              borderRadius: BorderRadius.circular(36),
+              border: Border.all(color: Colors.white, width: 4),
               boxShadow: [
                 BoxShadow(
-                  color: AppColors.gold.withValues(alpha: 0.35),
-                  blurRadius: 40,
-                  spreadRadius: 2,
+                  color: Colors.black.withValues(alpha: 0.25),
+                  blurRadius: 32,
+                  offset: const Offset(0, 12),
                 ),
               ],
             ),
@@ -136,7 +137,7 @@ class _Hero extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Text(
-            'Vitez',
+            'Protiva',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white.withValues(alpha: 0.9),
@@ -150,7 +151,7 @@ class _Hero extends StatelessWidget {
             'Privacy policy',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: AppColors.gold,
+              color: Colors.white,
               fontSize: isWide ? 40 : 30,
               fontWeight: FontWeight.w800,
               letterSpacing: 0.3,
@@ -160,9 +161,9 @@ class _Hero extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
             decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.08),
+              color: Colors.white.withValues(alpha: 0.15),
               borderRadius: BorderRadius.circular(999),
-              border: Border.all(color: AppColors.gold.withValues(alpha: 0.5)),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.5)),
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -170,7 +171,7 @@ class _Hero extends StatelessWidget {
                 const Icon(
                   Icons.update_rounded,
                   size: 16,
-                  color: AppColors.gold,
+                  color: Colors.white,
                 ),
                 const SizedBox(width: 8),
                 Text(
@@ -302,9 +303,9 @@ class _Footer extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
-      color: AppColors.maroonDark,
+      color: AppColors.brandDark,
       child: Text(
-        '© ${DateTime.now().year} Nextive Solution · Vitez',
+        '© ${DateTime.now().year} Nextive Solution · Protiva',
         textAlign: TextAlign.center,
         style: TextStyle(
           color: Colors.white.withValues(alpha: 0.7),
@@ -331,7 +332,7 @@ class _Card extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: AppColors.maroon.withValues(alpha: 0.08),
+            color: Colors.black.withValues(alpha: 0.06),
             blurRadius: 24,
             offset: const Offset(0, 8),
           ),
@@ -341,7 +342,7 @@ class _Card extends StatelessWidget {
         color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
-          side: BorderSide(color: AppColors.gold.withValues(alpha: 0.35)),
+          side: BorderSide(color: AppColors.brand.withValues(alpha: 0.15)),
         ),
         child: Padding(padding: const EdgeInsets.all(24), child: child),
       ),
@@ -363,10 +364,10 @@ class _SectionTitle extends StatelessWidget {
           width: 40,
           height: 40,
           decoration: BoxDecoration(
-            color: AppColors.gold.withValues(alpha: 0.18),
+            color: AppColors.brandTint,
             borderRadius: BorderRadius.circular(12),
           ),
-          child: Icon(icon, color: AppColors.maroon, size: 22),
+          child: Icon(icon, color: AppColors.brand, size: 22),
         ),
         const SizedBox(width: 12),
         Flexible(
@@ -375,7 +376,7 @@ class _SectionTitle extends StatelessWidget {
             style: const TextStyle(
               fontSize: 21,
               fontWeight: FontWeight.w700,
-              color: AppColors.maroon,
+              color: AppColors.ink,
             ),
           ),
         ),
@@ -416,12 +417,12 @@ class _Highlight extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.maroon,
+        color: AppColors.brand,
         borderRadius: BorderRadius.circular(14),
       ),
       child: Row(
         children: [
-          Icon(icon, color: AppColors.gold, size: 26),
+          Icon(icon, color: Colors.white, size: 26),
           const SizedBox(width: 14),
           Expanded(
             child: Text(
@@ -450,10 +451,10 @@ class _Note extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.cream,
+        color: AppColors.brandTint,
         borderRadius: BorderRadius.circular(14),
         border: const Border(
-          left: BorderSide(color: AppColors.goldDeep, width: 4),
+          left: BorderSide(color: AppColors.brand, width: 4),
         ),
       ),
       child: Row(
@@ -461,7 +462,7 @@ class _Note extends StatelessWidget {
         children: [
           const Icon(
             Icons.info_outline_rounded,
-            color: AppColors.maroonLight,
+            color: AppColors.brandEdge,
             size: 22,
           ),
           const SizedBox(width: 12),

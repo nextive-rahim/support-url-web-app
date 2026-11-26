@@ -1,11 +1,11 @@
 {
-    "name": "Vitez Privacy Policy",
-    "short_name": "Vitez",
+    "name": "Protiva Privacy Policy",
+    "short_name": "Protiva",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#3B000B",
-    "theme_color": "#3B000B",
-    "description": "Vitez Privacy Policy",
+    "background_color": "#EB2027",
+    "theme_color": "#EB2027",
+    "description": "Protiva Privacy Policy",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
